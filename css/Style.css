@@ -1,0 +1,120 @@
+﻿html, body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right,white,blue);
+}
+
+table {
+    border-collapse: collapse;
+    border-width: 10px;
+    border-style: inset;
+    border-top-color: green;
+    border-left-color: darkgreen;
+    border-right-color: hotpink;
+    border-bottom-color: blue;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    grid-template-rows: 270px 200px 1fr;
+}
+
+.logo {
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 0.5;
+}
+
+.hello {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 1;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 70px;
+    box-sizing: border-box;
+    font-family: Airport;
+    text-shadow: 2px 2px 2px #FF1493, 2px 2px 15px #1435AD;
+}
+
+.content {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end:4;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 2px solid brown;
+    margin-right: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px 1px black;
+}
+
+.Advertising {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.menu {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.menu-item {
+    display: middle;
+    justify-content: space-between;
+    height: 50px;
+    border: solid orange 2px;
+    margin: 10px auto 0;
+    width: 80%;
+    box-sizing: border-box;
+    padding-top: 12px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    font-family: menu-font;
+    background: radial-gradient(#F4A460,#D2691E);
+}
+
+.news {
+    grid-column: 3;
+    grid-row: 3;
+    border: 2px solid rgb(88, 204, 53);
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.contacts {
+    grid-column: 4;
+    grid-row: 3;
+    font-size: 1.5rem;
+}
+
+.authorship {
+    grid-row: 4;
+    font-weight: bold;
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        display: block;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .hello {
+        transform: rotate(0deg);
+        font-size: 2rem;
+        padding-top: 30px;
+    }
+
+    .content {
+        margin: 10px auto;
+        width: 90%;
+    }
+}
